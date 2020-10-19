@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+	<meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap version 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+     
+     <style>
+	    .container{
+	    	margin-top: 30px;
+	    	padding: 0;
+		}
+		#myTabContent{
+		    margin-top: 20px;
+		}
+		h3{
+			text-align:center;
+		}
+     </style>
+</head>
+<body>
+  <div class="container">
+        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+          <!--<li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#linearRegression" role="tab" aria-controls="home" aria-selected="true">Linear</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#naiveBayes" role="tab" aria-controls="profile" aria-selected="false">Naive Bayes</a>
+          </li>-->
+          <li class="nav-item active">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#id3" role="tab" aria-controls="contact" aria-selected="false">Decision Tree</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+        
+          <!--<div class="tab-pane fade show active" id="linearRegression" role="tabpanel" aria-labelledby="home-tab">
+              <h3>Player ideal weight Productor</h3>
+              <form action="DmProject" method="get">
+                  <div class="form-group">
+                      <input type="text" name="height" id="height" placeholder="Enter height (in cms)" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="button" onclick = "getWeight()" name="linearSubmit" value="Submit" id="linearSubmit" class="btn btn-primary">
+                  </div>
+              </form>  
+              <div class="card">
+	              	<div class="card-header">
+	              		Weight
+	              	</div>
+	              	<div class="card-body" id="linearOutput">
+	              	</div>
+              </div>       
+          </div>
+ 
+          <div class="tab-pane fade" id="naiveBayes" role="tabpanel" aria-labelledby="profile-tab">
+           <h3>Player attacker work rate predictor</h3>
+              <form action="" method="get">
+                  <div class="form-group">
+                      <input type="text" name="n-pace" id="n-pace" placeholder="Enter pace " class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="n-shot" id="n-shot" placeholder="Enter Shot" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="n-dribble" id="n-dribble" placeholder="Enter Dribble" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="n-acceleration" id="n-acceleration" placeholder="Enter Acceleration" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="n-sprint-speed" id="n-sprint-speed" placeholder="Enter Sprint Speed" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="button" onclick="getWorkNaiveRate()" name="naiveSubmit" value="Submit" id="naiveSubmit" class="btn btn-primary">
+                  </div>
+              </form>
+             <div class="card">
+	              	<div class="card-header">
+	              		Work Rate
+	              	</div>
+	              	<div class="card-body" id="naiveOutput">
+	              	</div>x
+              </div> 
+          </div>
+-->
+          <div class="tab-pane fade" id="id3" role="tabpanel" aria-labelledby="contact-tab">
+               <h3>Player attacker work rate predictor</h3>
+                <form action="" method="get">
+                  <div class="form-group">
+                      <input type="text" name="i-pace" id="i-pace" placeholder="Enter pace " class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="i-shot" id="i-shot" placeholder="Enter Shot" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="i-dribble" id="i-dribble" placeholder="Enter Dribble" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="i-acceleration" id="i-acceleration" placeholder="Enter Acceleration" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="i-sprint-speed" id="i-sprint-speed" placeholder="Enter Sprint Speed" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <input type="button" onclick="getWorkDecisionRate()" name="naiveSubmit" value="Submit" id="naiveSubmit" class="btn btn-primary">
+                  </div>
+              </form>
+              <div class="card">
+	              	<div class="card-header">
+	              		Work Rate
+	              	</div>
+	              	<div class="card-body" id="decisionTreeOutput">
+	              	</div>
+              </div>        
+          </div>
+          
+        </div>  
+    </div>    
+    <!--.container-fluid ends-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script>
+	
+	function getWeight(){
+		//window.alert("inside sendHeight");
+		var method = "linear";
+		var height = document.getElementById("height").value;
+		var xhttp = new XMLHttpRequest();
+		//window.alert("after xhttp");
+		xhttp.onreadystatechange = function(){
+			if(this.readyState == 4 && this.status == 200){
+				document.getElementById("linearOutput").innerHTML = this.responseText;
+				//window.alert("height "+this.responseText);
+			}
+		}
+		
+		xhttp.open("GET","http://localhost:8080/DM/DmProject?&height="+height+"&method="+method,true);
+		xhttp.send();
+	}
+	function getWorkNaiveRate(){
+		//window.alert("inside sendHeight");
+		var method = "naive";
+		var pace = document.getElementById("n-pace").value;
+		var shot = document.getElementById("n-shot").value;
+		var dribble = document.getElementById("n-dribble").value;
+		var acceleration = document.getElementById("n-acceleration").value;
+		var sprintSpeed = document.getElementById("n-sprint-speed").value;
+		
+		var xhttp = new XMLHttpRequest();
+		//window.alert("after xhttp");
+		xhttp.onreadystatechange = function(){
+			if(this.readyState == 4 && this.status == 200){
+				document.getElementById("naiveOutput").innerHTML = this.responseText;
+				//window.alert("height "+this.responseText);
+			}
+		}
+		
+		xhttp.open("GET","http://localhost:8080/DM/DmProject?method="+method+"&pace="+pace+"&shot="+shot+"&dribble="+dribble+"&acceleration="+acceleration+"&sprint-speed="+sprintSpeed,true);
+		xhttp.send();
+	}
+    function getWorkDecisionRate(){
+        //window.alert("inside sendHeight");
+        var method = "decision";
+        var pace = document.getElementById("i-pace").value;
+        var shot = document.getElementById("i-shot").value;
+        var dribble = document.getElementById("i-dribble").value;
+        var acceleration = document.getElementById("i-acceleration").value;
+        var sprintSpeed = document.getElementById("i-sprint-speed").value;
+
+        var xhttp = new XMLHttpRequest();
+        //window.alert("after xhttp");
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                document.getElementById("decisionTreeOutput").innerHTML = this.responseText;
+                //window.alert("height "+this.responseText);
+            }
+        }
+        var url = "http://localhost:8080/DM/DmProject/"+method+"?pace="+pace+"&shot="+shot+"&dribble="+dribble+"&acceleration="+acceleration+"&sprint-speed="+sprintSpeed;
+        console.log(url);
+        xhttp.open("GET",url,true);
+        xhttp.send();
+    }
+	
+	</script>
+</body>
+</html>
